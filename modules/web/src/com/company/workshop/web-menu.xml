@@ -2,5 +2,7 @@
 <menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
     <menu id="application-workshop"
           insertBefore="administration">
+        <item screen="workshop$Order.browse"/>
+        <item screen="workshop$Worker.browse"/>
     </menu>
 </menu-config>

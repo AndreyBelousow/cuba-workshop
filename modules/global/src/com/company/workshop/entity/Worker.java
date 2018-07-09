@@ -5,34 +5,49 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.chile.core.annotations.NamePattern;
+import java.math.BigDecimal;
+import com.haulmont.cuba.security.entity.User;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-@NamePattern("%s %s|firstName,lastName")
+@NamePattern(" |")
 @Table(name = "WORKSHOP_WORKER")
 @Entity(name = "workshop$Worker")
 public class Worker extends StandardEntity {
     private static final long serialVersionUID = 4841710609597521975L;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID")
+    protected User user;
 
-    @Column(name = "FIRST_NAME")
-    protected String firstName;
+    @Column(name = "HOURLY_RATE")
+    protected BigDecimal hourlyRate;
 
-    @Column(name = "LAST_NAME")
-    protected String lastName;
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public User getUser() {
+        return user;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+
+    public void setHourlyRate(BigDecimal hourlyRate) {
+        this.hourlyRate = hourlyRate;
     }
 
-    public String getLastName() {
-        return lastName;
+    public BigDecimal getHourlyRate() {
+        return hourlyRate;
     }
+
+
+
+
+
+
+
+
+
 
 
 }

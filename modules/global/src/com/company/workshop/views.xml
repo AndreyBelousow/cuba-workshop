@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
-
+    <view class="com.company.workshop.entity.Order"
+          extends="_local"
+          name="order-view">
+        <property name="client"
+                  view="_minimal"/>
+        <property name="worker"
+                  view="_minimal"/>
+        <property name="parts"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.workshop.entity.Order"
+          extends="_local"
+          name="order-view_1">
+        <property name="client"
+                  view="_minimal"/>
+        <property name="worker"
+                  view="_minimal"/>
+        <property name="parts"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.workshop.entity.Worker"
+          extends="_local"
+          name="worker-view">
+        <property name="user"
+                  view="_minimal">
+            <property name="email"/>
+        </property>
+    </view>
+    <view class="com.company.workshop.entity.Worker"
+          extends="_local"
+          name="worker-view_1">
+        <property name="user"
+                  view="_minimal"/>
+    </view>
 </views>
