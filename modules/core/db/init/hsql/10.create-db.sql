@@ -10,8 +10,8 @@ create table WORKSHOP_ORDER (
     DELETED_BY varchar(50),
     --
     STATUS integer,
-    CLIENT_ID varchar(36),
-    WORKER_ID varchar(36),
+    CLIENT_ID varchar(36) not null,
+    WORKER_ID varchar(36) not null,
     DESCRIPTION varchar(255),
     HOURS_SPEND integer,
     TOTAL_AMOUNT decimal(19, 2),

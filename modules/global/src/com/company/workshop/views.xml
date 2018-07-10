@@ -34,4 +34,16 @@
         <property name="user"
                   view="_minimal"/>
     </view>
+    <view class="com.company.workshop.entity.Client"
+          extends="_local"
+          name="client-view"/>
+    <view class="com.company.workshop.entity.Client"
+          extends="_local"
+          name="client-view_1"/>
+    <view class="com.company.workshop.entity.SparePart"
+          extends="_local"
+          name="sparePart-view"/>
+    <view class="com.company.workshop.entity.SparePart"
+          extends="_local"
+          name="sparePart-view_1"/>
 </views>

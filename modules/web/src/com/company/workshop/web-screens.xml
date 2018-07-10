@@ -8,4 +8,12 @@
             template="com/company/workshop/web/worker/worker-browse.xml"/>
     <screen id="workshop$Worker.edit"
             template="com/company/workshop/web/worker/worker-edit.xml"/>
+    <screen id="workshop$Client.browse"
+            template="com/company/workshop/web/client/client-browse.xml"/>
+    <screen id="workshop$Client.edit"
+            template="com/company/workshop/web/client/client-edit.xml"/>
+    <screen id="workshop$SparePart.browse"
+            template="com/company/workshop/web/sparepart/spare-part-browse.xml"/>
+    <screen id="workshop$SparePart.edit"
+            template="com/company/workshop/web/sparepart/spare-part-edit.xml"/>
 </screen-config>

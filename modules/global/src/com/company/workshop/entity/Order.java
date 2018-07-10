@@ -12,8 +12,9 @@ import java.math.BigDecimal;
 import java.util.List;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.validation.constraints.NotNull;
 
-@NamePattern("%s %s|status,client")
+@NamePattern("%s %s %s|status,client,worker")
 @Table(name = "WORKSHOP_ORDER")
 @Entity(name = "workshop$Order")
 public class Order extends StandardEntity {
@@ -22,11 +23,13 @@ public class Order extends StandardEntity {
     @Column(name = "STATUS")
     protected Integer status;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "CLIENT_ID")
     protected Client client;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "WORKER_ID")
     protected Worker worker;
 

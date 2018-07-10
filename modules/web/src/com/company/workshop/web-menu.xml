@@ -4,5 +4,7 @@
           insertBefore="administration">
         <item screen="workshop$Order.browse"/>
         <item screen="workshop$Worker.browse"/>
+        <item screen="workshop$Client.browse"/>
+        <item screen="workshop$SparePart.browse"/>
     </menu>
 </menu-config>
