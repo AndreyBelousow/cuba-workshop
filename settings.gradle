@@ -1,4 +1,4 @@
-rootProject.name = 'workshop'
+rootProject.name = 'bike_workshop'
 def modulePrefix = 'app'
 include(":${modulePrefix}-global", ":${modulePrefix}-core", ":${modulePrefix}-web")
 project(":${modulePrefix}-global").projectDir = new File(settingsDir, 'modules/global')

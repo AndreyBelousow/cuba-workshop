@@ -1,1 +1,0 @@
-drop index IDX_WORKSHOP_CLIENT_UNIQ_EMAIL ;

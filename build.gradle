@@ -31,7 +31,7 @@ apply(plugin: 'cuba')
 
 cuba {
     artifact {
-        group = 'com.company.workshop'
+        group = 'com.company.bikeworkshop'
         version = '0.1'
         isSnapshot = true
     }
@@ -107,7 +107,7 @@ configure(coreModule) {
     task createDb(dependsOn: assembleDbScripts, description: 'Creates local database', type: CubaDbCreation) {
         dbms = 'hsql'
         host = 'localhost'
-        dbName = 'workshop'
+        dbName = 'bikeworkshop'
         dbUser = 'sa'
         dbPassword = ''
     }
@@ -115,7 +115,7 @@ configure(coreModule) {
     task updateDb(dependsOn: assembleDbScripts, description: 'Updates local database', type: CubaDbUpdate) {
         dbms = 'hsql'
         host = 'localhost'
-        dbName = 'workshop'
+        dbName = 'bikeworkshop'
         dbUser = 'sa'
         dbPassword = ''
     }
@@ -144,7 +144,7 @@ configure(webModule) {
 
     task deployConf(type: Copy) {
         from file('src')
-        include "com/company/workshop/**"
+        include "com/company/bikeworkshop/**"
         into "$cuba.tomcat.dir/conf/${modulePrefix}"
     }
 
