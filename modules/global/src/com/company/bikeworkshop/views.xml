@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
-
+    <view class="com.company.bikeworkshop.entity.Worker"
+          extends="_local"
+          name="worker-view">
+        <property name="user"
+                  view="_minimal"/>
+    </view>
+    <view class="com.company.bikeworkshop.entity.Order"
+          extends="_local"
+          name="order-view">
+        <property name="client"
+                  view="_minimal"/>
+        <property name="worker"
+                  view="_minimal"/>
+        <property name="parts"
+                  view="_minimal">
+            <property name="description"/>
+        </property>
+    </view>
 </views>
