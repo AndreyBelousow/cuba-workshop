@@ -5,8 +5,10 @@ import javax.persistence.Table;
 import javax.persistence.Column;
 import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.chile.core.annotations.NamePattern;
+import javax.persistence.FetchType;
+import javax.persistence.OneToOne;
 
-@NamePattern("%s %s %s|name,phone,email")
+@NamePattern("%s %s %s|name,phone,contacts")
 @Table(name = "WORKSHOP_CLIENT")
 @Entity(name = "workshop$Client")
 public class Client extends StandardEntity {
@@ -18,8 +20,18 @@ public class Client extends StandardEntity {
     @Column(name = "PHONE")
     protected String phone;
 
-    @Column(name = "EMAIL")
-    protected String email;
+
+    @Column(name = "CONTACTS")
+    protected String contacts;
+
+    public void setContacts(String contacts) {
+        this.contacts = contacts;
+    }
+
+    public String getContacts() {
+        return contacts;
+    }
+
 
     public void setName(String name) {
         this.name = name;
@@ -35,14 +47,6 @@ public class Client extends StandardEntity {
 
     public String getPhone() {
         return phone;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getEmail() {
-        return email;
     }
 
 

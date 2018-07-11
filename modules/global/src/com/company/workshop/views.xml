@@ -25,7 +25,6 @@
           name="worker-view">
         <property name="user"
                   view="_minimal">
-            <property name="email"/>
         </property>
     </view>
     <view class="com.company.workshop.entity.Worker"

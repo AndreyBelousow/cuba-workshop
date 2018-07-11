@@ -42,11 +42,20 @@ public class Order extends StandardEntity {
     @ManyToMany
     protected List<SparePart> parts;
 
-    @Column(name = "HOURS_SPEND")
-    protected Integer hoursSpend;
+    @Column(name = "HOURS_SPENT")
+    protected Integer hoursSpent;
 
     @Column(name = "TOTAL_AMOUNT")
     protected BigDecimal totalAmount;
+
+    public void setHoursSpent(Integer hoursSpent) {
+        this.hoursSpent = hoursSpent;
+    }
+
+    public Integer getHoursSpent() {
+        return hoursSpent;
+    }
+
 
     public void setParts(List<SparePart> parts) {
         this.parts = parts;
@@ -54,14 +63,6 @@ public class Order extends StandardEntity {
 
     public List<SparePart> getParts() {
         return parts;
-    }
-
-    public void setHoursSpend(Integer hoursSpend) {
-        this.hoursSpend = hoursSpend;
-    }
-
-    public Integer getHoursSpend() {
-        return hoursSpend;
     }
 
     public void setTotalAmount(BigDecimal totalAmount) {
