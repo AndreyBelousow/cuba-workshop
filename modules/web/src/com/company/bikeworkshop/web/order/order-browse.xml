@@ -48,6 +48,18 @@
                         action="ordersTable.edit"/>
                 <button id="removeBtn"
                         action="ordersTable.remove"/>
+                <button id="setNewStatusButton"
+                        caption="Set as New"
+                        invoke="onSetNewStatusButtonClick"/>
+                <button id="setInProgressStatusButton"
+                        caption="Set as InProgress"
+                        invoke="onSetInProgressStatusButtonClick"/>
+                <button id="setReturnedStatusButton"
+                        caption="Set as Returned"
+                        invoke="onSetReturnedStatusButtonClick"/>
+                <button id="setReadyStatusButton"
+                        caption="Set as Ready"
+                        invoke="onSetReadyStatusButtonClick"/>
             </buttonsPanel>
         </groupTable>
     </layout>
